@@ -1,9 +1,7 @@
-# hsky backend for laravel
+# hsky wechat for laravel
 
 1. laravel version : 5.3
 
-2. Todo list
-	1. 用户管理
-	2. 角色管理
-	3. 权限管理
-	4. 菜单管理
+2. 验证wechat服务器
+
+3. 返回排班表

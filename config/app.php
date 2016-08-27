@@ -178,6 +178,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * third party service provider
+         */
+        Overtrue\LaravelWechat\ServiceProvider::class,
+
     ],
 
     /*
@@ -225,6 +230,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        /*third party facade*/
+        'Wechat' => Overtrue\LaravelWechat\Facade::class,
     ],
 
 ];
