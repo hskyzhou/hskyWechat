@@ -27,7 +27,7 @@
 
 			$duty = $timetables[$number];
 
-			return $duty;
+			return $duty->name;
 		}
 
 		/*获取上班时刻表*/
