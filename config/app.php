@@ -231,7 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         /*third party facade*/
-        'Wechat' => Overtrue\LaravelWechat\Facade::class,  //微信
+        'EasyWeChat' => Overtrue\LaravelWechat\Facade::class,  //微信
     ],
 
 ];
