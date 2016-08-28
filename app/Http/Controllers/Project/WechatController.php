@@ -12,18 +12,16 @@ use EasyWeChat;
 class WechatController extends Controller{
     
     public function server(){
-		\Log::info('asfasf');
     	$server = EasyWeChat::server();
 
     	$server->setMessageHandler(function($message){
 
-    		\Log::info($message);
     		switch ($message->MsgType) {
 	            case 'subscribe':
 	                return '欢迎订阅';
 	                break;
 	            case 'text':
-	            	
+	            	return '我已接收到数据';
 	            	break;
 	            default:
 	                # code...
