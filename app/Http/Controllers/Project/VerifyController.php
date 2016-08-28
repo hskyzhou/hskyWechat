@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Service\Project\VerifyService;
+use App\Services\Project\VerifyService as Service;
 
 class VerifyController extends Controller{
 

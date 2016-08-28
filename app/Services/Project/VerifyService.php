@@ -9,15 +9,17 @@
 			$nonce = request('nonce', '');
 			$token = config('wechat.token');
 
+			$echostr = request('echostr');
+
 			$tmpArr = [$token, $timestamp, $nonce];
 			sort($tmpArr, SORT_STRING);
 			$tmpStr = implode($tmpArr);
 			$tmpStr = sha1($tmpStr);
 
 			if($tmpStr == $signature){
-				return true;
+				return $echostr;
 			}else{
-				return false;
+				return '';
 			}
 		}
 	}	
