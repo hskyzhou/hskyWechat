@@ -18,6 +18,7 @@ class DutyController extends Controller
 	}
 
 	public function index($attributes = []){
+		\Log::debug($attributes);
 		return $this->service->index($attributes);
 	}
 }
