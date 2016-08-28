@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Services\DutyService;
+use App\Services\Project\DutyService as Service;
 
 class DutyController extends Controller
 {
@@ -18,6 +18,6 @@ class DutyController extends Controller
 	}
 
 	public function index(){
-		
+		$this->service->index();
 	}
 }

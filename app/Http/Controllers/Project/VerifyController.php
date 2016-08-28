@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Service\VerifyService;
+use App\Service\Project\VerifyService;
 
 class VerifyController extends Controller{
 
@@ -20,6 +20,6 @@ class VerifyController extends Controller{
 
 	/*验证方法*/
 	public function index(){
-		
+		return $this->service->index();
 	}
 }

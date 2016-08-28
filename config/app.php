@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'PRC',
 
     /*
     |--------------------------------------------------------------------------
@@ -181,7 +181,7 @@ return [
         /*
          * third party service provider
          */
-        Overtrue\LaravelWechat\ServiceProvider::class,
+        Overtrue\LaravelWechat\ServiceProvider::class,   //微信
 
     ],
 
@@ -231,7 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         /*third party facade*/
-        'Wechat' => Overtrue\LaravelWechat\Facade::class,
+        'Wechat' => Overtrue\LaravelWechat\Facade::class,  //微信
     ],
 
 ];

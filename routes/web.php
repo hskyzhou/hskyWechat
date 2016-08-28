@@ -10,3 +10,10 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+$router->group(['namespace' => 'Project'], function($router){
+	$router->resource('duty', 'DutyController', ['only' => 'index']);
+
+	$router->any('wechat', 'WechatController@server');
+
+	$router->resource('verify', 'VerifyController', ['onley' => 'index']);
+});

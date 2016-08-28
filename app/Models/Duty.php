@@ -14,7 +14,7 @@ class Duty extends Model{
 		parent::__construct($attributes);
 
 		/*设置操作的数据字段*/
-		$this->fillable = array_values(config('project.field.duty'));
+		$this->fillable = array_values(config('project.field.duties'));
 	}
 
 	/*设置scope*/
