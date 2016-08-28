@@ -21,7 +21,7 @@ class WechatController extends Controller{
 	                return '欢迎订阅';
 	                break;
 	            case 'text':
-	            	$content = $message->content;
+	            	$content = $message->Content;
 	            	return $content;
 	            	break;
 	            default:
