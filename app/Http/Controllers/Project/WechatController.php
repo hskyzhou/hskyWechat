@@ -22,7 +22,9 @@ class WechatController extends Controller{
 	                break;
 	            case 'text':
 	            	$content = $message->Content;
-	            	return $content;
+	            	$arr = explode($content);
+	            	$controller = 'App\\Controllers\\Project\\' .  . ucfirst(array_shift($arr)) . 'Controller';
+	            	return app($controller)->call('index', $arr);
 	            	break;
 	            default:
 	                # code...
