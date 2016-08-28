@@ -8,7 +8,7 @@ class Duty extends Model{
 
 	protected $fillable;
 
-	protected $dateFormat = 'U';
+	// protected $dateFormat = 'U';
 
 	public function __construct(array $attributes = []){
 		parent::__construct($attributes);
