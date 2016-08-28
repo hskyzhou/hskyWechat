@@ -20,12 +20,9 @@ class WechatController extends Controller{
     	$server = app('wechat')->server;
 
     	$server->setMessageHandler(function($message){
-    		switch($message->MsgType){
-    			default : 
-    				break;
-    		}
+    		return 'safasf';
     	});
 
-    	return $server->server();
+    	return $server->serve();
     }
 }
