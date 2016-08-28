@@ -17,7 +17,7 @@ class DutyController extends Controller
 		$this->service = $service;
 	}
 
-	public function index(){
-		return $this->service->index();
+	public function index($attributes = []){
+		return $this->service->index($attributes);
 	}
 }

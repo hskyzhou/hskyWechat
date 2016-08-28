@@ -12,8 +12,8 @@
 			$this->dutyRepo = $dutyRepo;
 		}
 
-		public function index(){
-			$date = request('date') ? new Carbon(request('date')) : new Carbon();
+		public function index($attributes){
+			$date = request('date') ? new Carbon(request('date')) :  (isset($attributes[0]) ? new Carbon($attributes[0]) : new Carbon());
 
 			$timetables = $this->getTimeTable();
 			$count = $timetables->count();
@@ -26,7 +26,7 @@
 			$number = $diffDays % $count;
 
 			$duty = $timetables[$number];
-			
+
 			return $duty->name;
 		}
 
