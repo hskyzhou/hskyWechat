@@ -15,7 +15,7 @@ class WechatController extends Controller{
     	$server = EasyWeChat::server();
 
     	$server->setMessageHandler(function($message){
-    		switch ($message->Event) {
+    		switch ($message->MsgType) {
 	            case 'subscribe':
 	                return '欢迎订阅';
 	                break;
