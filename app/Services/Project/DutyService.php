@@ -13,7 +13,9 @@
 		}
 
 		public function index($attributes){
+			\Log::info($attributes);
 			$date = request('date') ? new Carbon(request('date')) :  (isset($attributes[0]) ? new Carbon($attributes[0]) : new Carbon());
+			\Log::info($date);
 
 			$timetables = $this->getTimeTable();
 			$count = $timetables->count();
