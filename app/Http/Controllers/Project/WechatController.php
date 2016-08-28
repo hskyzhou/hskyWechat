@@ -24,7 +24,7 @@ class WechatController extends Controller{
 	            	$content = $message->Content;
 	            	$arr = explode(' ', $content);
 
-	            	$controller = 'App\\Http\\Controllers\\Project\\' . ucfirst(array_shift($arr)) . 'Controller';
+	            	$controller = '\\App\\Http\\Controllers\\Project\\' . ucfirst(array_shift($arr)) . 'Controller';
 	            	$controller = app()->make($controller);
 	            	\Log::info($controller);
 	            	\Log::info($arr);
