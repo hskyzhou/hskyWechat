@@ -23,11 +23,12 @@ class WechatController extends Controller{
 	            case 'text':
 	            	$content = $message->Content;
 	            	$arr = explode(' ', $content);
+	            	\Log::info($arr);
 
 	            	$controllerName = '\\App\\Http\\Controllers\\Project\\' . ucfirst(array_shift($arr)) . 'Controller';
+	            	\Log::info($arr);
 	            	$controller = app()->make($controllerName);
 	            	$result = app()->call([$controller, 'index'], $arr);
-	            	\Log::info($result);
 	            	return $result;
 	            	break;
 	            default:
