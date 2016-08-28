@@ -12,15 +12,20 @@ use EasyWeChat;
 class WechatController extends Controller{
     
     public function server(){
-    	// $server = EasyWeChat::server();
-
-    	// dd($server);
-    	// dd(app('wechat'));
-
-    	$server = app('wechat')->server;
+    	$server = EasyWeChat::server();
 
     	$server->setMessageHandler(function($message){
-    		return 'safasf';
+    		switch ($message->Event) {
+	            case 'subscribe':
+	                return '欢迎订阅';
+	                break;
+	            case 'text':
+	            	return '日期';
+	            	break;
+	            default:
+	                # code...
+	                break;
+	        }
     	});
 
     	return $server->serve();
