@@ -18,6 +18,6 @@ class DutyController extends Controller
 	}
 
 	public function index(){
-		$this->service->index();
+		return $this->service->index();
 	}
 }

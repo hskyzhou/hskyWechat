@@ -26,7 +26,7 @@
 			$number = $diffDays % $count;
 
 			$duty = $timetables[$number];
-			\Log::info($duty->name);
+			
 			return $duty->name;
 		}
 
