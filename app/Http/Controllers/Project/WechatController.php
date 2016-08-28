@@ -26,7 +26,9 @@ class WechatController extends Controller{
 
 	            	$controllerName = '\\App\\Http\\Controllers\\Project\\' . ucfirst(array_shift($arr)) . 'Controller';
 	            	$controller = app()->make($controllerName);
-	            	return app()->call([$controller, 'index'], $arr);
+	            	$result = app()->call([$controller, 'index'], $arr);
+	            	\Log::info($result);
+	            	return $result;
 	            	break;
 	            default:
 	                # code...
