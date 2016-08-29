@@ -14,4 +14,6 @@ $router->group(['namespace' => 'Project'], function($router){
 	$router->resource('duty', 'DutyController', ['only' => 'index']);
 
 	$router->any('/', 'WechatController@server');
+
+	$router->resource('simulate', 'SimulateController');
 });
