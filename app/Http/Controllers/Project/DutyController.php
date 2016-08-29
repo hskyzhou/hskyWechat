@@ -14,11 +14,12 @@ class DutyController extends Controller
 	public $service;
 
 	public function __construct(Service $service){
+		\Log::error(func_get_args());
 		$this->service = $service;
 	}
 
 	public function index($attributes = []){
-		\Log::debug($attributes);
+		\Log::debug(func_get_args());
 		return $this->service->index($attributes);
 	}
 }
